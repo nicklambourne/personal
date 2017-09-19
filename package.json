@@ -1,0 +1,22 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nickl93/personal.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickl93/personal/issues"
+  },
+  "homepage": "https://github.com/nickl93/personal#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
