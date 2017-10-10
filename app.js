@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 // Routes
 app.get('/', function (req, res) {
-    res.send("Hello, world!");
+    res.render("index");
 });
 
 // Run

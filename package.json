@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/nickl93/personal#readme",
   "dependencies": {
-    "express": "^4.16.1"
+    "bootstrap": "^4.0.0-beta",
+    "express": "^4.16.1",
+    "font-awesome": "^4.7.0",
+    "jade": "^1.11.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.11.1"
   }
 }
