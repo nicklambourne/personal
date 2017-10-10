@@ -1,6 +1,13 @@
 extends layout
 
 block content
+    script.
+        $("#brand").click(function () {
+            console.log("Why not?");
+            $(this).animate({width: "400px", height: "400px"}, 1000);
+                $(this).animate({width: "200px", height: "200px"}, 1000);
+        });
+
     .fullscreen-bg
         video#bg-vid(autoplay='', loop='', muted='', plays-inline='' poster='/img/vidbg.jpg')
             source(src='/video/bg.mp4', type='video/mp4')

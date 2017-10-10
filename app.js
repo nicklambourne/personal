@@ -8,6 +8,10 @@ app.set("view engine", "jade");
 
 // Static files
 app.use(express.static("public"));
+app.use(express.static("node_modules/jquery/dist"));
+app.use(express.static("node_modules/bootstrap/dist"));
+app.use(express.static("node_modules/popper.js/dist"));
+app.use(express.static("node_modules/font-awesome"));
 
 // Routes
 app.get('/', function (req, res) {
