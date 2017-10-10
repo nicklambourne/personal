@@ -1,33 +1,34 @@
 {
-  "name": "personal",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/nickl93/personal.git"
-  },
-  "keywords": [
-    "node",
-    "express",
-    "blog"
-  ],
-  "author": "nickl93",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nickl93/personal/issues"
-  },
-  "homepage": "https://github.com/nickl93/personal#readme",
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "express": "^4.16.1",
-    "font-awesome": "^4.7.0",
-    "jade": "^1.11.0",
-    "jquery": "^3.2.1",
-    "lodash": "^4.17.4",
-    "popper.js": "^1.11.1"
-  }
+    "name": "personal",
+    "version": "1.0.0",
+    "description": "My personal website",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/nickl93/personal.git"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "blog"
+    ],
+    "author": "nickl93",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nickl93/personal/issues"
+    },
+    "homepage": "https://github.com/nickl93/personal#readme",
+    "dependencies": {
+        "bootstrap": "^4.0.0-beta",
+        "express": "^4.16.1",
+        "font-awesome": "^4.7.0",
+        "jade": "^1.11.0",
+        "jquery": "^3.2.1",
+        "lodash": "^4.17.4",
+        "popper.js": "^1.11.1"
+    }
 }
