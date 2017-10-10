@@ -15,7 +15,7 @@ app.use(express.static("node_modules/font-awesome"));
 
 // Routes
 app.get('/', function (req, res) {
-    res.render("index");
+    res.render("index", {title: "NDL"});
 });
 
 // Run

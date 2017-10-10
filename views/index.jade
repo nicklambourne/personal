@@ -1,17 +1,20 @@
 extends layout
 
+
 block content
-    script.
-        $("#brand").click(function () {
-            console.log("Why not?");
-            $(this).animate({width: "400px", height: "400px"}, 1000);
-                $(this).animate({width: "200px", height: "200px"}, 1000);
-        });
 
     .fullscreen-bg
-        video#bg-vid(autoplay='', loop='', muted='', plays-inline='' poster='/img/vidbg.jpg')
+        video#bg-vid(autoplay='', loop='', muted='', plays-inline='' poster='/img/vigbg.jpg')
             source(src='/video/bg.mp4', type='video/mp4')
 
     a#brand.pulse
         img.brand-img#brand-img(src='/img/logo.png')
+
+    script.
+        $("#brand").mouseenter(function () {
+            $(this).css({width: "calc(12vw*1.05)", height: "calc(12vw*1.05)"});
+        });
+        $("#brand").mouseleave(function () {
+            $(this).css({width: "12vw", height: "12vw"});
+        });
 
