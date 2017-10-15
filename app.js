@@ -1,6 +1,6 @@
 // Dependencies
 let express = require("express");
-let sslRedirect = require("heroku-ssl-redirect")l
+let sslRedirect = require("heroku-ssl-redirect");
 
 // Initialisation & Settings
 let app = express();
