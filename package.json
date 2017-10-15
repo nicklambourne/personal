@@ -26,6 +26,7 @@
         "bootstrap": "^4.0.0-beta",
         "express": "^4.16.1",
         "font-awesome": "^4.7.0",
+        "heroku-ssl-redirect": "0.0.4",
         "jade": "^1.11.0",
         "jquery": "^3.2.1",
         "lodash": "^4.17.4",

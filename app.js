@@ -1,10 +1,14 @@
 // Dependencies
 let express = require("express");
+let sslRedirect = require("heroku-ssl-redirect")l
 
 // Initialisation & Settings
 let app = express();
 app.set("views", "views");
 app.set("view engine", "jade");
+
+// Middleware
+app.use(sslRedirect());
 
 // Static files
 app.use(express.static("public"));
