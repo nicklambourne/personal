@@ -1,14 +1,26 @@
 extends layout
 
-
 block content
 
     .fullscreen-bg
         video#bg-vid(autoplay='', loop='', muted='', plays-inline='' poster='/img/vigbg.jpg')
             source(src='/video/bg.mp4', type='video/mp4')
 
-    a#brand.pulse
-        img.brand-img#brand-img(src='/img/logo.png')
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
+        a.navbar-brand.pulse
+            img.brand-img#brand-img(src='/img/logo.png')
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarLinks', aria-controls='navbarLinks', aria-expanded='false', aria-label='Toggle navigation')#navTog
+            span.navbar-toggler-icon.smoke
+        .collapse.navbar-collapse#navbarLinks
+            ul.navbar-nav
+                li.nav-item.navItem
+                    a.nav-link.navLink(href='/about') About
+                li.nav-item.navItem
+                    a.nav-link.navLink(href='/blog') Blog
+                li.nav-item.navItem
+                    a.nav-link.navLink(href='/projects') Projects
+                li.nav-item.navItem
+                    a.nav-link.navLink(href='/cv') CV
 
     script.
         $("#brand").mouseenter(function () {

@@ -25,39 +25,69 @@ body {
     z-index: -100;
 }
 
-@media screen and (max-device-width: 800px) {
-    body {
-        background: url('/img/vigbg.jpg') #111 no-repeat center center fixed;
-    }
-    #bg-vid {
-        display: none;
-    }
+.navItem {
+    font-family: Montserrat, sans-serif ;
+    display: flex;
+    align-items: center;
 }
 
-#brand {
-    position: fixed;
-    top: 10vw;
-    left: 10vw;
-    height: 12vw;
-    width: 12vw;
+.navLink {
+    display: flex;
+    align-items: center;
+    color: whitesmoke !important;
+    font-size: 1.6em;
+    margin: auto;
+    text-align: center;
+}
+
+a:hover {
+    color: #9923bd !important;
+}
+
+.navbar {
+    width: 100%;
+    padding: 5vw;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+#navbarLinks {
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.navbar-brand {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-iteration-count: 3;
-    animation-iteration-count: 3;
+    -webkit-animation-iteration-count: 5;
+    animation-iteration-count: 5;
+}
 
+#navTog {
+    border-color: transparent;
+    margin-right: 2vw;
+}
+
+.navbar-toggler-icon {
+    height: 5vh;
+    width: 5vh;
 }
 
 @-webkit-keyframes pulse {
     0% { -webkit-transform: scale(1); }
-    50% { -webkit-transform: scale(1.05); }
+    50% { -webkit-transform: scale(1.005); }
     100% { -webkit-transform: scale(1); }
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    50% { transform: scale(1.005); }
     100% { transform: scale(1); }
 }
 
@@ -67,6 +97,31 @@ body {
 }
 
 #brand-img {
-    height: 100%;
-    width: 100%;
+    height: 12vh;
+    width: 12vh;
+}
+
+.smoke {
+    color: whitesmoke;
+}
+
+@media only screen and (max-device-width: 992px) {
+    body {
+        background: url('/img/vigbg.jpg') #111 no-repeat center center fixed;
+    }
+    #bg-vid {
+        display: none;
+    }
+    .navLink {
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    .navItem {
+        margin: 0 !important;
+    }
+    #navbarLinks {
+        margin: 0;
+    }
 }
