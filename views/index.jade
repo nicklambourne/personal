@@ -41,7 +41,7 @@ block content
                 setTimeout(
                     function () {
                         $("#socialLinksRow").animate({opacity: 0.0}, 750, 'linear');
-                        $("#socialLinksRow").css({visibility: "hidden"});
+                        setTimeout(function() {$("#socialLinksRow").css({visibility: "hidden"})}, 750);
                     },
                     3000);
             });
