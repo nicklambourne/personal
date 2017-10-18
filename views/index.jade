@@ -14,13 +14,13 @@ block content
         .collapse.navbar-collapse#navbarLinks
             ul.navbar-nav
                 li.nav-item.navItem
-                    a.nav-link.navLink(href='blog.ndl.im/about') About
+                    a.nav-link.navLink(href='https://blog.ndl.im/about') About
                 li.nav-item.navItem
-                    a.nav-link.navLink(href='blog.ndl.im') Blog
+                    a.nav-link.navLink(href='https://blog.ndl.im') Blog
                 li.nav-item.navItem
-                    a.nav-link.navLink(href='blog.ndl.im/projects') Projects
+                    a.nav-link.navLink(href='https://blog.ndl.im/projects') Projects
                 li.nav-item.navItem
-                    a.nav-link.navLink(href='/cv') CV
+                    a.nav-link.navLink(href='https://blog.ndl.im/cv') CV
     footer.footer.bg-transparent
         .container
             .row.footer-row#socialLinksRow
@@ -34,16 +34,31 @@ block content
                 a(href="javascript:;" style="text-decoration: none;")#linkAggregator
                     i.fa.fa-heart-o.fa-2x(aria-hidden='true')
     script.
+        var linkHovered = function() {
+            return $('#linkAggregator:hover').length != 0 ||
+                $('.social-link:hover').length != 0
+        }
+
+        var fadeIfInaction = function() {
+            setTimeout(
+                function() {
+                    if (!linkHovered()) {
+                        $("#socialLinksRow").animate({opacity: 0.0}, 750, 'linear');
+                        setTimeout(function () {
+                            $("#socialLinksRow").css({visibility: "hidden"})
+                        }, 750);
+                    } else {
+                        setTimeout(fadeIfInaction(), 4000);
+                    }
+                }, 4000
+            );
+        }
+
         $("#linkAggregator").mouseover(function () {
             $("#socialLinksRow").css({visibility: "visible"});
             $("#socialLinksRow").animate({opacity: 1.0}, 750, 'linear');
-            $("#linkAggregator").mouseleave(function() {
-                setTimeout(
-                    function () {
-                        $("#socialLinksRow").animate({opacity: 0.0}, 750, 'linear');
-                        setTimeout(function() {$("#socialLinksRow").css({visibility: "hidden"})}, 750);
-                    },
-                    3000);
-            });
+        });
+        $("#linkAggregator").mouseleave(function () {
+            fadeIfInaction();
         });
 
