@@ -12,8 +12,6 @@ app.set('view engine', 'jade');
 
 // Middleware
 app.use(sslRedirect());
-
-// My Modules
 app.use(subdomain('blog', blogRouter));
 
 // Static Files
