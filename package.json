@@ -25,6 +25,7 @@
     "dependencies": {
         "bootstrap": "^4.0.0-beta",
         "express": "^4.16.1",
+        "express-subdomain": "^1.0.5",
         "font-awesome": "^4.7.0",
         "heroku-ssl-redirect": "0.0.4",
         "jade": "^1.11.0",
