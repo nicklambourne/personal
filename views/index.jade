@@ -7,7 +7,7 @@ block content
             source(src='/video/bg.mp4', type='video/mp4')
 
     nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
-        a.navbar-brand.pulse
+        a.navbar-brand.pulse(href='/')
             img.brand-img#brand-img(src='/img/logo.png')
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarLinks', aria-controls='navbarLinks', aria-expanded='false', aria-label='Toggle navigation')#navTog
             span.navbar-toggler-icon.smoke
@@ -24,15 +24,22 @@ block content
     footer.footer.bg-transparent
         .container
             .row.footer-row#socialLinksRow
-                a.social-link(href="https://www.linkedin.com/in/nicholas-lambourne-07b782a2/" style="text-decoration: none;" target="_blank")
+                a.social-link(href='https://www.linkedin.com/in/nicholas-lambourne-07b782a2/' style='text-decoration: none;' target='_blank')
                     i#linkedinIcon
-                a.social-link(href="https://github.com/nickl93" style="text-decoration: none;" target="_blank")
+                a.social-link(href='https://github.com/nickl93' style='text-decoration: none;' target='_blank')
                     i#githubIcon
-                a.social-link(href="https://twitter.com/nicklambourne" style="text-decoration: none;" target="_blank")
+                a.social-link(href='https://twitter.com/nicklambourne' style='text-decoration: none;' target='_blank')
                     i#twitterIcon
             .row.footer-row
-                a(href="javascript:;" style="text-decoration: none;")#linkAggregator
+                a(href='javascript:;' style='text-decoration: none;')#linkAggregator
                     i.fa.fa-heart-o.fa-2x(aria-hidden='true')
+            .row.footer-row
+                #preload
+                    img(src='/img/li-light.png', height='1px', width='1px')
+                    img(src='/img/tw-light.png', height='1px', width='1px')
+                    img(src='/img/gh-light.png', height='1px', width='1px')
+
+
     script.
         var linkHovered = function() {
             return $('#linkAggregator:hover').length != 0 ||
@@ -43,9 +50,9 @@ block content
             setTimeout(
                 function() {
                     if (!linkHovered()) {
-                        $("#socialLinksRow").animate({opacity: 0.0}, 750, 'linear');
+                        $('#socialLinksRow').animate({opacity: 0.0}, 750, 'linear');
                         setTimeout(function () {
-                            $("#socialLinksRow").css({visibility: "hidden"})
+                            $('#socialLinksRow').css({visibility: 'hidden'})
                         }, 750);
                     } else {
                         setTimeout(fadeIfInaction(), 4000);
@@ -54,11 +61,11 @@ block content
             );
         }
 
-        $("#linkAggregator").mouseover(function () {
-            $("#socialLinksRow").css({visibility: "visible"});
-            $("#socialLinksRow").animate({opacity: 1.0}, 750, 'linear');
+        $('#linkAggregator').mouseover(function () {
+            $('#socialLinksRow').css({visibility: 'visible'});
+            $('#socialLinksRow').animate({opacity: 1.0}, 750, 'linear');
         });
-        $("#linkAggregator").mouseleave(function () {
+        $('#linkAggregator').mouseleave(function () {
             fadeIfInaction();
         });
 

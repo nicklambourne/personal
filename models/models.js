@@ -4,6 +4,8 @@ let Schema = mongoose.Schema;
 let postSchema = new Schema({
         id: String,
         published: Date,
+        title: String,
+
         content: String,
     }
 );
