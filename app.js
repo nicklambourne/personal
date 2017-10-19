@@ -2,13 +2,21 @@
 let express = require('express');
 let sslRedirect = require('heroku-ssl-redirect');
 let subdomain = require('express-subdomain');
+let mongoose = require('mongoose');
+let uuid = require('uuid');
 let blogRouter = require('./blog');
+let models = require('./models/models');
 
 
 // Initialisation & Settings
 let app = express();
 app.set('views', 'views');
 app.set('view engine', 'jade');
+mongoose.connect(process.env.MONGO_URI)
+    .catch(function (err) {
+        console.log('Database connection failed!' + err);
+    }
+);
 
 // Middleware
 app.use(sslRedirect());
@@ -24,6 +32,21 @@ app.use(express.static('node_modules/font-awesome'));
 // Routes
 app.get('/', function (req, res) {
     res.render('index', {title: 'NDL'});
+});
+
+app.get('/hello', function(req, res) {
+    let id = uuid.v4();
+    let content = 'hello';
+    let published = Date.now();
+    let obj = new models.Post({id: id, published: published, content: content});
+    obj.save(function (err, obj) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log('Added object: ' + obj.toString());
+        }
+    });
+    res.redirect('/')
 });
 
 // Run
