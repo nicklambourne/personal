@@ -6,17 +6,21 @@ let mongoose = require('mongoose');
 let uuid = require('uuid');
 let blogRouter = require('./blog');
 let models = require('./models/models');
-
+let aws = require('aws-sdk');
+let s3 = new aws.S3();
 
 // Initialisation & Settings
 let app = express();
 app.set('views', 'views');
 app.set('view engine', 'jade');
+mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI)
     .catch(function (err) {
         console.log('Database connection failed!' + err);
     }
 );
+const S3_BUCKET = process.env.S3_BUCKET;
+aws.config.region = 'ap-southeast-2';
 
 // Middleware
 app.use(sslRedirect());
