@@ -14,17 +14,6 @@ body {
     height: 100%;
 }
 
-#bg-vid {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-}
-
 .navItem {
     font-family: Montserrat, sans-serif ;
     display: flex;
@@ -34,7 +23,7 @@ body {
 .navLink {
     display: flex;
     align-items: center;
-    color: whitesmoke !important;
+    color: #48135C !important;
     font-size: 1.6em;
     margin: auto;
     text-align: center;
@@ -83,7 +72,6 @@ a:hover {
 .navbar-toggler-icon {
     height: 5vh;
     width: 5vh;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(72, 19, 92, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 @-webkit-keyframes pulse {
@@ -183,10 +171,6 @@ a:hover {
 #linkAggregator:hover {
     text-decoration: none;
     color: #c30000 !important;
-}
-
-.smoke {
-    color: whitesmoke;
 }
 
 @media only screen and (max-device-width: 992px) {
