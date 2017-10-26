@@ -1,3 +1,8 @@
 extends blog-base
 
 block blog-content
+    .row
+        .col-10.offset-1
+            each post in posts
+                h1 #{post.title}
+                p #{post.content}

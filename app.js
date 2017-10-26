@@ -40,9 +40,10 @@ app.get('/', function (req, res) {
 
 app.get('/hello', function(req, res) {
     let id = uuid.v4();
+    let title = "Hi";
     let content = 'hello';
     let published = Date.now();
-    let obj = new models.Post({id: id, published: published, content: content});
+    let obj = new models.Post({id: id, title: title, published: published, content: content});
     obj.save(function (err, obj) {
         if (err) {
             return console.error(err);
