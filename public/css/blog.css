@@ -15,7 +15,7 @@ body {
 }
 
 .navItem {
-    font-family: Montserrat, sans-serif ;
+    font-family: Montserrat, sans-serif;
     display: flex;
     align-items: center;
 }
@@ -31,6 +31,7 @@ body {
 
 a:hover {
     color: #9923bd !important;
+    text-decoration: none;
 }
 
 .navbar {
@@ -197,4 +198,13 @@ a:hover {
 
 div#preload {
     visibility: hidden;
+}
+
+a {
+    font-family: Montserrat, sans-serif;
+    color: #48135C;
+}
+
+h2 {
+    text-align: center;
 }
