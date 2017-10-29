@@ -1,0 +1,19 @@
+extends layout
+
+block headers
+    link(rel='stylesheet', href='/css/style.css')
+
+block content
+
+    a(href='/')
+        img.img404(src='/img/404.png')
+        img.img404#four(src='/img/404-1.png')
+
+    script.
+
+        $('#four').mouseover(function () {
+            $('#four').animate({opacity: 0.0}, 250, 'linear');
+        });
+        $('#four').mouseleave(function () {
+            $('#four').animate({opacity: 1.0}, 250, 'linear');
+        });

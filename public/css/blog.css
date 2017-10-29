@@ -197,7 +197,7 @@ a:hover {
 }
 
 div#preload {
-    visibility: hidden;
+    opacity: 0.01;
 }
 
 a {
