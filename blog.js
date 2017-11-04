@@ -1,6 +1,5 @@
 let express = require('express');
 let uuid = require('uuid');
-let html2jade = require('html2jade');
 let Post = require('./models/models').Post;
 let _ = require('lodash');
 
@@ -21,19 +20,19 @@ router.get('/', function(req, res) {
 });
 
 router.get('/about', function(req, res) {
-    res.render('about', {title: "About", base: base});
+    res.render('about', {title: "About", base: 'blog.' + base});
 });
 
 router.get('/projects', function(req, res) {
-    res.render('projects', {title: "Projects", base: base});
+    res.render('projects', {title: "Projects", base: 'blog.' + base});
 });
 
 router.get('/meta', function(req, res) {
-    res.render('meta', {title: "Meta", base: base});
+    res.render('meta', {title: "Meta", base: 'blog.' + base});
 });
 
 router.get('/post/new', function (req, res) {
-    res.render('create_post', {title: "New Post", base: base});
+    res.render('create_post', {title: "New Post", base: 'blog.' + base});
 });
 
 router.post('/post/new', function (req, res) {
@@ -59,7 +58,7 @@ router.get('/post/:id', function (req, res) {
             console.log(error.toString());
             res.sendStatus(404);
         } else {
-            res.render('post', {title: 'NDL', post: post, base: 'blog.'+base});
+            res.render('post', {title: 'NDL', post: post, base: 'blog.' + base});
         }
     });
 });
