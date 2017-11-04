@@ -176,27 +176,6 @@ a:hover {
     color: #c30000 !important;
 }
 
-@media only screen and (max-device-width: 992px) {
-    body {
-        background: url('/img/vigbg.jpg') #111 no-repeat center center fixed;
-    }
-    #bg-vid {
-        display: none;
-    }
-    .navLink {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-    }
-    .navItem {
-        margin: 0 !important;
-    }
-    #navbarLinks {
-        margin: 0;
-    }
-}
-
 div#preload {
     opacity: 0.01;
 }
