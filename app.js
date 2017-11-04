@@ -35,6 +35,7 @@ app.use(express.static('public'));
 app.use(express.static('node_modules/jquery/dist'));
 app.use(express.static('node_modules/bootstrap/dist'));
 app.use(express.static('node_modules/popper.js/dist'));
+app.use(express.static('node_modules/tinymce'));
 app.use(express.static('node_modules/font-awesome'));
 
 // Routes
@@ -45,7 +46,7 @@ app.get('/', function (req, res) {
 });
 // Custom 404
 app.use(function(req, res, next){
-    res.status(404).render('404', {title: "Sorry, page not found"});
+    res.status(404).render('404', {title: "Sorry, page not found", base: base});
 });
 
 // Run

@@ -1,5 +1,6 @@
 let express = require('express');
 let uuid = require('uuid');
+let html2jade = require('html2jade');
 let Post = require('./models/models').Post;
 let _ = require('lodash');
 
@@ -10,7 +11,7 @@ module.exports = router;
 let base = (process.env.ENV == 'development') ? 'hexxie.com:'+process.env.PORT.toString() : 'ndl.im';
 
 router.get('/', function(req, res) {
-    Post.find({}).sort('-published').exec(function (error, posts) {
+    Post.find({}, 'id title content published').sort('-published').exec(function (error, posts) {
         if (error) {
             console.log(error.toString());
         } else {
@@ -32,7 +33,7 @@ router.get('/meta', function(req, res) {
 });
 
 router.get('/post/new', function (req, res) {
-    res.render('add_post', {title: "New Post", base: base});
+    res.render('create_post', {title: "New Post", base: base});
 });
 
 router.post('/post/new', function (req, res) {
@@ -45,10 +46,11 @@ router.post('/post/new', function (req, res) {
         if (err) {
             return console.error(err);
         } else {
+            console.log('Content: ' + content.toString());
             console.log('Added object: ' + obj.toString());
         }
     });
-    res.redirect('/post/'+id);
+    res.redirect('/');
 });
 
 router.get('/post/:id', function (req, res) {
@@ -57,7 +59,7 @@ router.get('/post/:id', function (req, res) {
             console.log(error.toString());
             res.sendStatus(404);
         } else {
-            res.render('post', {title: 'NDL', post: post, base: base});
+            res.render('post', {title: 'NDL', post: post, base: 'blog.'+base});
         }
     });
 });

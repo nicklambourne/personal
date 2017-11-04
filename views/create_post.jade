@@ -1,5 +1,8 @@
 extends blog-base
 
+block subheaders
+    script(src='/tinymce.js', crossorigin='anonymous')
+
 
 block blog-content
     .row
@@ -12,3 +15,8 @@ block blog-content
                 textarea.form-control(placeholder="Content", name="content", id="content")
                 br
                 button.btn.btn-success(type="submit") Create Post
+
+    script.
+        tinymce.init({
+            selector: '#content'
+        });

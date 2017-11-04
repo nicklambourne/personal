@@ -2,15 +2,16 @@ extends blog-base
 
 block blog-content
     .row
-        .col-8.offset-2
+        .col-10.offset-1
             a(href='/')
-                h2 Somewhat Irregular
+                h1 // TODO: Implement Title
             br
             br
             each post in posts
                 a(href='/post/#{post.id}/')
-                    h4 #{post.title}
+                    h2 #{post.title}
                 em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
-                p #{post.content}
+                div.post-content(id='#{post.id}')
+                    | !{post.content}
                 br
                 br

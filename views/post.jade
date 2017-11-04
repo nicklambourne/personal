@@ -6,6 +6,6 @@ block blog-content
         .col-8.offset-2
             br
             a(href='#{post.id}')
-                h4 #{post.title}
+                h2 #{post.title}
             em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
-            p #{post.content}
+            | !{post.content}
