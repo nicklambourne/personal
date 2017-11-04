@@ -2,6 +2,33 @@ extends blog-base
 
 block blog-content
     .row
-        .col-8.offset-2
-            p Hi! I'm Nick. Somehow you've found your way onto my blog.
-            p I'm a software engineering student at the University of Queensland.
+        .col-8.offset-2.text-center
+            img#me(src='img/me.jpg')
+            br
+            br
+            p Hi! I'm Nick.
+            br
+            p I'm currently a Software Engineering student at the
+                a(href='https://uq.edu.au/')  University of Queensland,
+                |  though I also have degrees in Finance and Psychology.
+            br
+            p For now, I work at
+                a(href='http://adled.com.au')  ADLED
+                |  an LED Billboard company in sunny Brisbane, Australia. Though next year (2018) I'm headed to the
+                | University of Connecticut and the University of Edinburgh on exchange.
+            br
+            p On this site you can read
+                a(href='#{base}')  my musings
+                |  on software and life, check out the
+                a(href='/projects')  projects
+                |  I work on for uni (or just for fun).
+            br
+            p Each year I set myself a challenge to read 50 books (though I rarely succeed), you can find out what I'm reading
+                a(href='/reading')  here
+                |. If for whatever reason you're interested, you can also see
+                a(href='/listening')  what I'm listening to.
+            br
+            p If you'd like to get in contact you can reach me on
+                a(href='https://twitter.com/nicklambourne')  Twitter,
+                |  otherwise you can find my email on
+                a(href='/cv')  my CV.

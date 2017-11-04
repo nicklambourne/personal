@@ -188,3 +188,8 @@ a {
 h1 {
     text-align: center;
 }
+
+#me {
+    border-radius: 50%;
+    max-width: 250px;
+}
