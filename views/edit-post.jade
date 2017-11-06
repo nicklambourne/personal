@@ -1,0 +1,32 @@
+extends blog-base
+
+block subheaders
+    script(src='/tinymce.js', crossorigin='anonymous')
+
+
+block blog-content
+    .row
+        .col-10.offset-1
+            form(method='post')
+                if !post
+                    h4 New Post
+                    br
+                    input.form-control(type='text', placeholder='Tile', name='title', id='title')
+                    br
+                    textarea.form-control(placeholder='Content', name='content', id='content')
+                    br
+                    button.btn.btn-success(type='submit') Create Post
+                else
+                    h4 Edit Post
+                    br
+                    input.form-control(type='text', placeholder='Tile', name='title', id='title', value='#{post.title}')
+                    br
+                    textarea.form-control(placeholder='Content', name='content', id='content')
+                        | !{post.content}
+                    br
+                    button.btn.btn-success(type='submit') Update Post
+
+    script.
+        tinymce.init({
+            selector: '#content'
+        });

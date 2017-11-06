@@ -31,8 +31,12 @@ router.get('/meta', function(req, res) {
     res.render('meta', {title: "Meta", base: 'blog.' + base});
 });
 
+router.get('/reading', function(req, res) {
+    res.render('reading', {title: "Reading", base: 'blog.' + base});
+});
+
 router.get('/post/new', function (req, res) {
-    res.render('create_post', {title: "New Post", base: 'blog.' + base});
+    res.render('edit-post', {title: "New Post", base: 'blog.' + base});
 });
 
 router.post('/post/new', function (req, res) {
@@ -52,6 +56,34 @@ router.post('/post/new', function (req, res) {
     res.redirect('/');
 });
 
+router.get('/post/edit/:id', function(req, res) {
+    Post.findOne( {'id': req.params.id} ,function (error, post) {
+        if (error) {
+            console.log(error.toString());
+            res.sendStatus(404);
+        } else {
+            res.render('edit-post', {title: 'NDL', post: post, base: 'blog.' + base});
+        }
+    });
+});
+
+router.post('/post/edit/:id', function (req, res) {
+    let title = req.body.title;
+    let content = req.body.content;
+    Post.findOne( {'id': req.params.id} ,function (error, post) {
+        if (error) {
+            console.log(error.toString());
+            res.sendStatus(404);
+        } else {
+            post.title = title;
+            post.content = content;
+            post.save()
+            console.log('Edited object: ' + post.toString());
+            res.redirect('/post/' + post.id.toString());
+        }
+    });
+});
+
 router.get('/post/:id', function (req, res) {
     Post.findOne( {'id': req.params.id} ,function (error, post) {
         if (error) {
@@ -62,4 +94,6 @@ router.get('/post/:id', function (req, res) {
         }
     });
 });
+
+
 

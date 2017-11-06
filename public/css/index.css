@@ -137,36 +137,36 @@ a:hover {
     width: 32px;
     height: 32px;
     padding-top: 0;
-    content: url("/img/gh-dark.png");
+    content: url("/img/social/gh-dark.png");
 }
 
 #githubIcon:hover {
     color: #FFFFFF;
-    content: url("/img/gh-light.png");
+    content: url("/img/social/gh-light.png");
 }
 
 #twitterIcon {
     margin-top: 30px;
     width: 32px;
     height: 32px;
-    content: url("/img/tw-dark.png");
+    content: url("/img/social/tw-dark.png");
 }
 
 #twitterIcon:hover {
     color: #FFFFFF;
-    content: url("/img/tw-light.png");
+    content: url("/img/social/tw-light.png");
 }
 
 #linkedinIcon {
     margin-top: 30px;
     width: 32px;
     height: 32px;
-    content: url("/img/li-dark.png");
+    content: url("/img/social/li-dark.png");
 }
 
 #linkedinIcon:hover {
     color: #FFFFFF;
-    content: url("/img/li-light.png");
+    content: url("/img/social/li-light.png");
 }
 .footer-row {
 
