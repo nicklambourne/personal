@@ -42,7 +42,7 @@ app.use(express.static('node_modules/font-awesome'));
 let base = (process.env.ENV == 'development') ? 'hexxie.com:'+process.env.PORT.toString() : 'ndl.im';
 app.use(subdomain('blog', blogRouter));
 app.get('/', function (req, res) {
-    res.render('index', {title: 'NDL', base: base, });
+    res.render('index', {title: 'NDL', base: base});
 });
 // Custom 404
 app.use(function(req, res, next){
