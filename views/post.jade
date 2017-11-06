@@ -2,11 +2,14 @@ extends blog-base
 
 
 block blog-content
-    .row
-        .col-10.offset-1
-            br
-            a(href='#')
-                h2 #{post.title}
-            em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
-            a(href='/post/edit/#{post.id}', style='color: white;')  Edit
-            | !{post.content}
+    div(itemscope='', itemtype='http://schema.org/BlogPosting')
+        .row
+            .col-10.offset-1
+                br
+                a(href='#')
+                    h2(itemprop='name headline') #{post.title}
+                time(datetime='#{post.time}' itemprop='datePublished')
+                    em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
+                a(href='/post/edit/#{post.id}', style='color: white;')  Edit
+                div(itemprop='articleBody')
+                    | !{post.content}

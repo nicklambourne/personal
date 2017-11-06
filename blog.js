@@ -35,6 +35,10 @@ router.get('/reading', function(req, res) {
     res.render('reading', {title: "Reading", base: 'blog.' + base});
 });
 
+router.get('/listening', function(req, res) {
+    res.render('listening', {title: "Listening", base: 'blog.' + base});
+});
+
 router.get('/post/new', function (req, res) {
     res.render('edit-post', {title: "New Post", base: 'blog.' + base});
 });
