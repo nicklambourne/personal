@@ -4,6 +4,13 @@ extends layout
 block headers
     link(rel='stylesheet', href='/css/blog.css')
     block subheaders
+        script(type='application/ld+json').
+            {
+                "@context": "http://schema.org",
+                "@type": "Blog",
+                "author": "Nicholas Lambourne",
+                "image": "https://ndl.im/img/logo.png"
+            }
 
 block content
     nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
