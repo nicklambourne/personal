@@ -51,15 +51,6 @@ a:hover {
     height: 100%;
 }
 
-.navbar-brand {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: 5;
-    animation-iteration-count: 5;
-}
-
 .footer-row {
     display: flex;
     align-items: center;
@@ -75,23 +66,6 @@ a:hover {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(72, 19, 92, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     height: 5vh;
     width: 5vh;
-}
-
-@-webkit-keyframes pulse {
-    0% { -webkit-transform: scale(1); }
-    50% { -webkit-transform: scale(1.005); }
-    100% { -webkit-transform: scale(1); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.005); }
-    100% { transform: scale(1); }
-}
-
-.pulse {
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
 }
 
 #brand-img {
