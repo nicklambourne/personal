@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'cd /tmp/'
                 checkout scm
-                sh 'npm install'
+                sh 'sudo npm install'
             }
         }
     }
