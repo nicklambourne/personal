@@ -1,16 +1,13 @@
 pipeline {
     agent {
         docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-            customWorkspace '~'
+            image 'node:8'
+            args '-u root:root'
         }
     }
     stages {
         stage('Build') {
             steps {
-                sh 'cd /tmp/'
-                checkout scm
                 sh 'sudo npm install'
             }
         }
