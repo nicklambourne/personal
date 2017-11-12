@@ -22,6 +22,8 @@ pipeline {
         }
         stage('deploy') {
             steps {
+                sh 'git config --global user.email "ndl93@live.com"'
+                sh 'git config --global user.name "nickl93"'
                 sh 'git commit -m "initial"'
                 sh 'git push --force heroku master'
             }
