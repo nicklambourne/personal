@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'pwd'
+                sh 'echo ${USER}'
                 sh 'cd /tmp'
                 sh 'rm -rf *'
                 checkout scm
@@ -27,7 +28,8 @@ pipeline {
                 sh 'touch README.md'
                 sh 'git add --all'
                 sh 'git commit -m "initial"'
-                sh 'git push --force heroku master'
+                sh 'git push https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
+ master'
             }
         }
     }
