@@ -8,6 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'cd /tmp'
+                sh 'cd rm -rf *'
+                checkout scm
                 sh 'npm install'
             }
         }
@@ -18,6 +21,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
+                sh 'git commit -m "initial"'
                 sh 'git push --force heroku master'
             }
         }
