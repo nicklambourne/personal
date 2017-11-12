@@ -29,4 +29,6 @@ describe('App', function() {
                 })
         })
     });
+
+    process.exit(0);
 });
