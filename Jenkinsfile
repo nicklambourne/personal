@@ -29,7 +29,6 @@ pipeline {
                 sh 'git add --all'
                 sh 'git commit -m "initial"'
                 sh 'git push https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
- master'
             }
         }
     }
