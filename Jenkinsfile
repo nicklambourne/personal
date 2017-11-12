@@ -8,8 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'pwd'
                 sh 'cd /tmp'
-                sh 'cd rm -rf *'
+                sh 'rm -rf *'
                 checkout scm
                 sh 'npm install'
             }
