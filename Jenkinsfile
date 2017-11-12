@@ -19,7 +19,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh 'git remote add heroku https://git.heroku.com/aqueous-harbor-56769.git'
-                sh 'git push heroku master'
+                sh 'git push --force heroku master'
             }
         }
     }
