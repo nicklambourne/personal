@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:8'
-            args '-u root:root'
+            args '-u root:root -v /var/lib/jenkins/.netrc:/root/.netrc'
         }
     }
     stages {
@@ -23,6 +23,11 @@ pipeline {
         }
         stage('deploy') {
             steps {
+                sh 'git config --global user.email "ndl93@live.com"'
+                sh 'git config --global user.name "nickl93"'
+                sh 'touch README.md'
+                sh 'git add --all'
+                sh 'git commit -m "initial"'
                 sh 'git push https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
             }
         }
