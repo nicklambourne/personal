@@ -12,7 +12,7 @@ pipeline {
                 sh 'echo ${USER}'
                 sh 'cd /tmp'
                 sh 'rm -rf *'
-                checkout scm
+                git
                 sh 'npm install'
             }
         }
