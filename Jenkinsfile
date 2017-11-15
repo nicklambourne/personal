@@ -9,10 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'pwd'
-                sh 'echo ${USER}'
-                sh 'cd /tmp'
-                sh 'rm -rf *'
-                git
+                checkout scm
                 sh 'npm install'
             }
         }
@@ -21,13 +18,8 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Deploy') {
+        stage('deploy') {
             steps {
-                sh 'git config --global user.email "ndl93@live.com"'
-                sh 'git config --global user.name "nickl93"'
-                sh 'touch README.md'
-                sh 'git add --all'
-                sh 'git commit -m "initial"'
                 sh 'git push --force https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
             }
         }
