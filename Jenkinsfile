@@ -28,7 +28,7 @@ pipeline {
                 sh 'touch README.md'
                 sh 'git add --all'
                 sh 'git commit -m "initial"'
-                sh 'git push https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
+                sh 'git push --force https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
             }
         }
     }
