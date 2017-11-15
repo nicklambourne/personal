@@ -1,7 +1,5 @@
-html,
-body,
-div,
-h1,
+html, body, div,
+h1, h2, h3, h4, h5,
 p,
 a,
 video {
@@ -154,18 +152,20 @@ div#preload {
     opacity: 0.01;
 }
 
-a {
+a, h1, h2, h3, h4, h5 {
     font-family: Montserrat, sans-serif;
     color: #48135C;
-}
-
-h1 {
-    text-align: center;
 }
 
 #me {
     border-radius: 50%;
     max-width: 250px;
+}
+
+/* TinyMCE/Prism Code Block Customisation */
+pre {
+    border-radius: 0 !important;
+    border: none !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
