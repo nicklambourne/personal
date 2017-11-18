@@ -1,34 +1,34 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let app = require('../app');
-
-
-let assert = chai.assert;
+var chai = require('chai');
+var chaiHttp = require('chai-http');
+var server = require('../app');
+var should = chai.should();
 
 chai.use(chaiHttp);
 
+
 describe('App', function() {
-    describe('/', function () {
-        it('responds with status 200', function (done) {
-            chai.request(app)
-                .get('/')
-                .end(function (err, res) {
-                    assert(res.status == 200, "Root URL: OK", "Root URL: FAILED");
-                    done();
-                })
-        })
+    it('should return a 200 on the index page', function(done) {
+        chai.request(server)
+            .get('/')
+            .end(function(err, res){
+                res.should.have.status(200);
+                done();
+            });
     });
-
-    describe('404', function () {
-        it('404', function (done) {
-            chai.request(app)
-                .get('///')
-                .end(function (err, res) {
-                    assert(res.status == 404, "404: OK", "404: FAILED");
-                    done();
-                })
-        })
+    it('should return a 200 on the blog page', function(done) {
+        chai.request('http://blog.hexxie.com:' + process.env.PORT)
+            .get('/')
+            .end(function(err, res){
+                res.should.have.status(200);
+                done();
+            });
     });
-
-    process.exit(0);
+    it('should return a 404 on an unmapped page', function(done) {
+        chai.request(server)
+            .get('/doesnotexist')
+            .end(function(err, res){
+                res.should.have.status(404);
+                done();
+            });
+    });
 });
