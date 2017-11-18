@@ -15,14 +15,6 @@ describe('App', function() {
                 done();
             });
     });
-    it('should return a 200 on the blog page', function(done) {
-        chai.request('http://blog.hexxie.com:' + process.env.PORT)
-            .get('/')
-            .end(function(err, res){
-                res.should.have.status(200);
-                done();
-            });
-    });
     it('should return a 404 on an unmapped page', function(done) {
         chai.request(server)
             .get('/doesnotexist')
