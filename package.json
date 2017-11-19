@@ -37,6 +37,7 @@
         "mongodb": "^2.2.33",
         "mongoose": "^4.10.8",
         "popper.js": "^1.12.6",
+        "request": "^2.83.0",
         "tinymce": "^4.7.1",
         "uuid": "^3.1.0"
     },

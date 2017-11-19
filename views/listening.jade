@@ -4,3 +4,32 @@ block subheaders
 
 
 block blog-content
+    .row
+        .col-10.offset-1
+            each track in data
+                .row
+                    .col-2.offset-1
+                        a(href='#{track.previewURL}')
+                            img(class='#{track.albumId}', src='http://static.rhap.com/img/300x300/6/9/0/7/8527096_300x300.jpg', width='100%')
+                    .col-8
+                        p Song: #{track.name}
+                        p Album: #{track.albumName}
+                        p Artist: #{track.artistName}
+                        audio(controls='')
+                            source(src='#{track.previewURL}', type='audio/mpeg')
+                br
+
+    script.
+        var albums = $('*[class^="alb."]');
+        console.log(albums);
+        for (let i = 0; i < albums.length; i++) {
+            var albumId = albums[i].classList[0];
+            $.get(
+                // API key is from the Napster API demo site, have at it ;)
+                'https://api.napster.com/v2.2/albums/' + albumId + '/images?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4',
+                function (data, status, jqxhr) {
+                    albums[i].setAttribute("src", data.images[data.images.length - 2].url.toString());
+                    console.log(albums[i].attributes.src);
+                }
+            )
+        }
