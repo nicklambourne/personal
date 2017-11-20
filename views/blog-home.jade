@@ -2,16 +2,17 @@ extends blog-base
 
 block blog-content
     .row
-        .col-10.offset-1
+        .col-12
             a(href='/')
                 h1.text-center // TODO: Witty Blog Title
             br
             br
             each post in posts
-                h2
-                    a(href='/post/#{post.id}/') #{post.title}
-                em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
-                div.post-content(id='#{post.id}')
-                    | !{post.content}
-                br
-                br
+                if post.draft !== true
+                    h2
+                        a(href='/post/#{post.id}/') #{post.title}
+                    em #{post.published.toDateString()} #{post.published.toLocaleTimeString('en-US', {hour12: false})}
+                    div.post-content(id='#{post.id}')
+                        | !{post.content}
+                    br
+                    br

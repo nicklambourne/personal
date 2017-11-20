@@ -11,7 +11,7 @@ module.exports = router;
 let base = (process.env.ENV == 'development') ? 'hexxie.com:'+process.env.PORT.toString() : 'ndl.im';
 
 router.get('/', function(req, res) {
-    Post.find({}, 'id title content published').sort('-published').exec(function (error, posts) {
+    Post.find({}, 'id title content published draft').sort('-published').exec(function (error, posts) {
         if (error) {
             console.log(error.toString());
         } else {
@@ -67,7 +67,7 @@ router.get('/listening', function(req, res) {
             }
             let napster_data = JSON.parse(body).tracks;
             console.log(napster_data);
-            res.render('listening', {title: 'About',
+            res.render('listening', {title: 'NDL',
                 base: 'blog.' + base,
                 data: napster_data
             });
@@ -84,7 +84,8 @@ router.post('/post/new', function (req, res) {
     let title = req.body.title;
     let content = req.body.content;
     let published = Date.now();
-    let obj = new Post({id: id, title: title, published: published, content: content});
+    let draft = req.body.draft;
+    let obj = new Post({id: id, title: title, published: published, content: content, draft: draft});
     obj.save(function (err, obj) {
         if (err) {
             return console.error(err);
@@ -110,6 +111,7 @@ router.get('/post/edit/:id', function(req, res) {
 router.post('/post/edit/:id', function (req, res) {
     let title = req.body.title;
     let content = req.body.content;
+    let draft = req.body.draft;
     Post.findOne( {'id': req.params.id} ,function (error, post) {
         if (error) {
             console.log(error.toString());

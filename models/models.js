@@ -6,7 +6,8 @@ let postSchema = new Schema({
     id: String,
     published: Date,
     title: String,
-    content: String
+    content: String,
+    draft: Boolean,
 });
 
 let Post = mongoose.model('Post', postSchema);
