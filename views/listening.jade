@@ -9,14 +9,13 @@ block blog-content
             each track in data
                 .row
                     .col-2.offset-1
-                        a(href='#{track.previewURL}')
                             img(class='#{track.albumId}', src='https://static.rhap.com/img/300x300/6/9/0/7/8527096_300x300.jpg', width='100%')
                     .col-8
                         p Song: #{track.name}
                         p Album: #{track.albumName}
                         p Artist: #{track.artistName}
                         audio(controls='' controlsList="nodownload")
-                            source(src='#{track.previewURL}', type='audio/mpeg')
+                            source(src='#{proxy}/sample.mp3?url='+ encodeURIComponent(track.previewURL), type='audio/mpeg')
                 br
 
     script.

@@ -6,7 +6,7 @@ block headers
     link(rel='stylesheet', href='/css/prism.css')
     script(type='application/ld+json').
         {
-            "@context": "http://schema.org",
+            "@context": "https://schema.org",
             "@type": "Blog",
             "author": "Nicholas Lambourne",
             "image": "https://ndl.im/img/logo.png"
@@ -17,7 +17,7 @@ block headers
 
 block content
     nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
-        a.navbar-brand.pulse(href='http://#{base}')
+        a.navbar-brand.pulse(href='https://#{base}')
             img.brand-img#brand-img(src='/img/logo.png')
         button.navbar-toggler.custom-toggler(type='button', data-toggle='collapse', data-target='#navbarLinks', aria-controls='navbarLinks', aria-expanded='false', aria-label='Toggle navigation')#navTog
             span.navbar-toggler-icon
@@ -31,5 +31,5 @@ block content
                     a.nav-link.navLink(href='/projects') Projects
                 li.nav-item.navItem
                     a.nav-link.navLink(href='/meta') Meta
-    .container(itemprop='', itemtype='http://schema.org/Blog')
+    .container(itemprop='', itemtype='https://schema.org/Blog')
         block blog-content

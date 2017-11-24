@@ -69,6 +69,7 @@ router.get('/listening', function(req, res) {
             console.log(napster_data);
             res.render('listening', {title: 'NDL',
                 base: 'blog.' + base,
+                proxy: 'proxy.' + base,
                 data: napster_data
             });
         })
