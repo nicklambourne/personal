@@ -15,7 +15,7 @@ block blog-content
                         p Album: #{track.albumName}
                         p Artist: #{track.artistName}
                         audio(controls='' controlsList="nodownload")
-                            source(src='https://#{proxy}/sample.mp3?url='+ encodeURIComponent(track.previewURL), type='audio/mpeg')
+                            source(src='#{track.previewURL}', type='audio/mpeg')
                 br
 
     script.
