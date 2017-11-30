@@ -14,7 +14,7 @@ block blog-content
                         p Song: #{track.name}
                         p Album: #{track.albumName}
                         p Artist: #{track.artistName}
-                        audio(controls='' controlsList="nodownload")
+                        // audio(controls='' controlsList="nodownload")
                             source(src='#{track.previewURL}', type='audio/mpeg')
                 br
 
