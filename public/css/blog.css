@@ -171,3 +171,12 @@ pre {
 h1, h2, h3, h4, h5, h6 {
     color: #48135C;
 }
+
+.reading-pill-box {
+    display: flex;
+    justify-content: center;
+}
+
+.year-tab {
+    margin-right: 10px;
+}
