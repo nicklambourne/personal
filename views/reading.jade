@@ -9,13 +9,12 @@ block blog-content
                 li.nav-item.year-tab
                     a#pills-2018-tab.nav-link.active.bg-light.text-muted(data-toggle='pill', href='#pills-2018', role='tab', aria-controls='pills-home', aria-selected='true') 2018
                 li.nav-item
-                    a#pills-profile-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') 2017
+                    a#pills-2017-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2017', role='tab', aria-controls='pills-profile', aria-selected='false') 2017
             
             #pills-tabContent.tab-content
-                #pills-2018.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                #pills-2018.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2018-tab')
                     h3 Currently Reading
-                    ol(start=3)
-                        li The Satanic Verses - Salman Rushdie
+                    ol(start=4)
                         li The Manager's Path - Camille Fournier
                         li JavaScript: The Good Parts - Douglas Crockford
                         li Gödel, Escher, Bach: An Eternal Golden Braid - Douglas Hofstadter
@@ -27,6 +26,7 @@ block blog-content
                     ol(start=1)
                         li Women & Power - Mary Beard
                         li All the President's Men - Bob Woodward & Carl Bernstein
+                        li The Haunting of Hill House - Shirley Jackson
                         br
                     h3 // TO DO
                     ul
@@ -36,8 +36,9 @@ block blog-content
                         li East of Eden - John Steinbeck
                         li The Goldfinch - Donna Tartt
                         li The Little Friend - Donna Tartt
+                        li The Satanic Verses - Salman Rushdie
                         
-                #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                #pills-2017.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2017-tab')
                     h3 Read in 2017
                     ol
                         li Scarecrow and the Army of Theives - Matthew Reilly
