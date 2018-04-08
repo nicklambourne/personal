@@ -6,7 +6,6 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let blogRouter = require('./blog');
 let adminRouter = require('./admin');
-let proxyRouter = require('./proxy');
 let aws = require('aws-sdk');
 let s3 = new aws.S3();
 
@@ -43,7 +42,6 @@ app.use(express.static('node_modules/font-awesome'));
 let base = (process.env.ENV == 'development') ? 'hexxie.com:'+process.env.PORT.toString() : 'ndl.im';
 app.use(subdomain('blog', blogRouter));
 app.use(subdomain('admin', adminRouter));
-app.use(subdomain('proxy', proxyRouter));
 app.get('/', function (req, res) {
     res.render('index', {title: 'NDL', base: base});
 });
