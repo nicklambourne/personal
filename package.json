@@ -38,7 +38,7 @@
         "mongoose": "^4.10.8",
         "popper.js": "^1.12.6",
         "request": "^2.83.0",
-        "tinymce": "^4.7.1",
+        "tinymce": "^4.7.11",
         "uuid": "^3.1.0"
     },
     "devDependencies": {

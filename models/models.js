@@ -25,3 +25,16 @@ let bookSchema = new Schema({
 let Book = mongoose.model('Book', bookSchema);
 exports.Book = Book;
 
+// Projects
+let projectSchema = new Schema({
+    id: String,
+    title: String,
+    github_link: String,
+    description: String,
+    post_link: String,
+    img: String,
+    published: Date
+});
+
+let Project = mongoose.model('Project', projectSchema);
+exports.Project = Project;
