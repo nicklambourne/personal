@@ -45,6 +45,11 @@ app.use(subdomain('admin', adminRouter));
 app.get('/', function (req, res) {
     res.render('index', {title: 'NDL', base: base});
 });
+
+app.get('/cv', function (req, res) {
+    res.redirect('https://github.com/nicklambourne/resume/raw/master/resume.pdf')
+});
+
 // Custom 404
 app.use(function(req, res, next){
     res.status(404).render('404', {title: "Sorry, page not found", base: base});

@@ -26,7 +26,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/projects', function(req, res) {
-    Project.find({}, 'id title github_link description post_link img published').sort('-published').exec(function (error, projects) {
+    Project.find({}, 'id title github_link description post_link img published language').sort('-published').exec(function (error, projects) {
         if (error) {
             console.log(error.toString());
         } else {
@@ -43,7 +43,7 @@ router.get('/projects/new', function (req, res) {
 router.post('/projects/new', function (req, res) {
     let id = uuid.v4();
     let title = req.body.title;
-    let description = req.body.content;
+    let description = req.body.description;
     let published = Date.now();
     let github_link = '';
     let post_link = '';

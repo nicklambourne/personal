@@ -13,10 +13,15 @@ block blog-content
                     br
                     input.form-control(type='text', placeholder='Title', name='title', id='title')
                     br
-                    textarea.form-control(placeholder='Content', name='content', id='content')
+                    textarea.form-control(placeholder='Content', name='description', id='description')
                     br
-                    button.btn.btn-success(type='submit') Create Post
-                    input(type='checkbox', name='draft', id='draft')
+                    input.form-control(type='text', placeholder='Github Link', name='github_link', id='github_link')
+                    br
+                    input.form-control(type='text', placeholder='Post Link', name='post_link', id='post_link')
+                    br
+                    input.form-control(type='text', placeholder='Image', name='img', id='img')
+                    br
+                    button.btn.btn-success(type='submit') Create Project
                 else
                     h4 Edit Post
                     br
@@ -39,7 +44,7 @@ block blog-content
                 {text: "HTML", value: "html"},
                 {text: "mathml", value: "mathml"},
                 {text: "SVG", value: "svg"},
-                {text: "CSS", value: "css"},
+                {text: "CSS",value: "css"},
                 {text: "Clike", value: "clike"},
                 {text: "Javascript", value: "javascript"},
                 {text: "ActionScript", value: "actionscript"},
