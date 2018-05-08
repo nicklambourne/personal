@@ -81,75 +81,9 @@ a:hover {
     justify-content: center;
 }
 
-#socialLinksRow {
-    display: flex;
-    visibility: hidden;
-    opacity: 0.0;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-}
-
-.social-link {
-    margin: 0 10px;
-    width: 32px;
-    height: 32px;
-}
-
-#githubIcon {
-    width: 32px;
-    height: 32px;
-    padding-top: 0;
-    content: url("/img/gh-dark.png");
-}
-
-#githubIcon:hover {
-    color: #FFFFFF;
-    content: url("/img/gh-light.png");
-}
-
-#twitterIcon {
-    margin-top: 30px;
-    width: 32px;
-    height: 32px;
-    content: url("/img/tw-dark.png");
-}
-
-#twitterIcon:hover {
-    color: #FFFFFF;
-    content: url("/img/tw-light.png");
-}
-
-#linkedinIcon {
-    margin-top: 30px;
-    width: 32px;
-    height: 32px;
-    content: url("/img/li-dark.png");
-}
-
-#linkedinIcon:hover {
-    color: #FFFFFF;
-    content: url("/img/li-light.png");
-}
-.footer-row {
-
-}
-
-#linkAggregator {
-    display: flex;
-    height: 30px;
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 #linkAggregator:hover {
     text-decoration: none;
     color: #c30000 !important;
-}
-
-div#preload {
-    opacity: 0.01;
 }
 
 a, h1, h2, h3, h4, h5 {
@@ -179,4 +113,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .year-tab {
     margin-right: 10px;
+}
+
+.book {
+    border: 0px solid #C8C8C8;
+    border-radius: 2px;
+}
+
+.aligner {
+    display: flex;
+    align-items: center;
+}
+
+.aligned {
+
 }

@@ -1,6 +1,7 @@
 let express = require('express');
 let request = require('request');
 let uuid = require('uuid');
+let Book = require('./models/models').Book;
 let Post = require('./models/models').Post;
 let Project = require('./models/models').Project;
 let _ = require('lodash');
@@ -66,7 +67,13 @@ router.get('/meta', function(req, res) {
 });
 
 router.get('/reading', function(req, res) {
-    res.render('reading', {title: 'Reading', base: 'blog.' + base});
+    Book.find({}, 'id author title started  completed img').sort('-completed').exec(function (error, books) {
+        if (error) {
+            console.log(error.toString());
+        } else {
+            res.render('reading', {title: 'Reading', base: 'blog.' + base, books: books});
+        }
+    });
 });
 
 router.get('/listening', function(req, res) {

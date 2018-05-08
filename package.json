@@ -34,6 +34,7 @@
         "jade": "^1.11.0",
         "jquery": "^3.2.1",
         "lodash": "^4.17.4",
+        "material-ui": "^0.20.0",
         "mongodb": "^2.2.33",
         "mongoose": "^4.10.8",
         "popper.js": "^1.12.6",

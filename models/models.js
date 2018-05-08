@@ -18,8 +18,10 @@ let bookSchema = new Schema({
     id: String,
     author: String,
     title: String,
+    started: Date,
     completed: Date,
-    number: Number
+    medium: String,
+    img: String,
 });
 
 let Book = mongoose.model('Book', bookSchema);
