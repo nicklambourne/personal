@@ -23,28 +23,30 @@
     },
     "homepage": "https://github.com/nickl93/personal#readme",
     "dependencies": {
-        "aws-sdk": "^2.137.0",
+        "aws-sdk": "^2.235.1",
         "body-parser": "^1.18.2",
-        "bootstrap": "^4.0.0-beta.2",
-        "express": "^4.16.1",
+        "bootstrap": "^4.1.1",
+        "express": "^4.16.3",
         "express-subdomain": "^1.0.5",
         "font-awesome": "^4.7.0",
         "heroku-ssl-redirect": "0.0.4",
         "html2jade": "^0.8.6",
         "jade": "^1.11.0",
-        "jquery": "^3.2.1",
-        "lodash": "^4.17.4",
-        "material-ui": "^0.20.0",
-        "mongodb": "^2.2.33",
-        "mongoose": "^4.10.8",
-        "popper.js": "^1.12.6",
-        "request": "^2.83.0",
-        "tinymce": "^4.7.11",
-        "uuid": "^3.1.0"
+        "jquery": "^3.3.1",
+        "lodash": "^4.17.10",
+        "material-ui": "^1.0.0-beta.46",
+        "mongodb": "^2.2.35",
+        "mongoose": "^4.13.12",
+        "popper.js": "^1.14.3",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "request": "^2.85.0",
+        "tinymce": "^4.7.12",
+        "uuid": "^3.2.1"
     },
     "devDependencies": {
         "chai": "^4.1.2",
         "chai-http": "^3.0.0",
-        "mocha": "^4.0.1"
+        "mocha": "^4.1.0"
     }
 }
