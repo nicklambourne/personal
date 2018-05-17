@@ -67,7 +67,7 @@ router.get('/meta', function(req, res) {
 });
 
 router.get('/reading', function(req, res) {
-    Book.find({}, 'id author title started  completed img').sort('-completed').exec(function (error, books) {
+    Book.find({}).populate('author').sort('completed').exec(function (error, books) {
         if (error) {
             console.log(error.toString());
         } else {

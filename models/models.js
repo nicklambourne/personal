@@ -14,10 +14,23 @@ let Post = mongoose.model('Post', postSchema);
 exports.Post = Post;
 
 // Reading List Books
+
+let authorSchema = new Schema({
+    id: String,
+    name: String,
+    gender: String,
+    nationality: String,
+});
+
+let Author = mongoose.model('Author', authorSchema);
+exports.Author = Author;
+
 let bookSchema = new Schema({
     id: String,
-    author: String,
+    author: [{type: Schema.Types.ObjectId, ref: 'Author'}],
     title: String,
+    pages: Number,
+    url: String,
     started: Date,
     completed: Date,
     medium: String,

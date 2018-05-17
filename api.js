@@ -7,10 +7,9 @@ let _ = require('lodash');
 
 let router = express.Router();
 
-
 let base = (process.env.ENV == 'development') ? 'hexxie.com:' + process.env.PORT.toString() : 'ndl.im';
 
-router.get('/admin', function (req, res, next) {
+router.get('/api', function (req, res, next) {
     // Comment out this line:
     //res.send('respond with a resource');
 
@@ -26,12 +25,3 @@ router.get('/admin', function (req, res, next) {
 
 
 module.exports = router;
-
-//router.get('/', function(req, res) {
-//    res.render('admin', {title: 'Admin', base: 'admin.' + base});
-//});
-
-
-
-
-
