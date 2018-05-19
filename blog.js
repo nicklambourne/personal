@@ -27,6 +27,8 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/projects', function(req, res) {
+    res.redirect('https://github.com/nicklambourne/');
+    /*
     Project.find({}, 'id title github_link description post_link img published language').sort('-published').exec(function (error, projects) {
         if (error) {
             console.log(error.toString());
@@ -34,6 +36,7 @@ router.get('/projects', function(req, res) {
             res.render('projects', {title: 'Projects', base: 'blog.' + base, projects: projects});
         }
     });
+    */
 });
 
 
