@@ -49,6 +49,10 @@ app.get('/', function (req, res) {
     res.render('index', {title: 'NDL', base: base});
 });
 
+app.get('/admin', function (req, res) {
+    res.redirect('https://admin.ndl.im')
+});
+
 app.get('/cv', function (req, res) {
     res.redirect('https://github.com/nicklambourne/resume/raw/master/resume.pdf');
 });
