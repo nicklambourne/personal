@@ -72,3 +72,11 @@ block content
             fadeIfInaction();
         });
 
+        var bgVid = document.getElementById('bg-vid');
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            bgVid.setAttribute('poster', 'vidbg.gif')
+        }
+        bgVid.setAttribute('playsinline', '');
+        bgVid.setAttribute('muted', '');
+
+
