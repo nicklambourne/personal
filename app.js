@@ -53,7 +53,7 @@ app.get('/admin', function (req, res) {
 });
 
 app.get('/cv', function (req, res) {
-    res.redirect('https://github.com/nicklambourne/resume/raw/master/resume.pdf');
+    res.redirect('https://github.com/nicklambourne/resume/raw/master/cv.pdf');
 });
 
 // Custom 404
