@@ -28,6 +28,7 @@ exports.Author = Author;
 let bookSchema = new Schema({
     id: String,
     author: [{type: Schema.Types.ObjectId, ref: 'Author'}],
+    language: String,
     title: String,
     pages: Number,
     url: String,
