@@ -39,7 +39,7 @@ router.get('/projects', function(req, res) {
     */
 });
 
-
+/*
 router.get('/projects/new', function (req, res) {
     res.render('edit-project', {title: 'New Post', base: 'blog.' + base});
 });
@@ -64,7 +64,7 @@ router.post('/projects/new', function (req, res) {
     });
     res.redirect('/projects');
 });
-
+*/
 router.get('/meta', function(req, res) {
     res.render('meta', {title: 'Meta', base: 'blog.' + base});
 });
@@ -119,6 +119,7 @@ router.get('/listening', function(req, res) {
     });
 });
 
+/*
 router.get('/post/new', function (req, res) {
     res.render('edit-post', {title: 'New Post', base: 'blog.' + base});
 });
@@ -169,6 +170,8 @@ router.post('/post/edit/:id', function (req, res) {
         }
     });
 });
+
+*/
 
 router.get('/post/:id', function (req, res) {
     Post.findOne( {'id': req.params.id} ,function (error, post) {
