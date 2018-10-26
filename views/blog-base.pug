@@ -17,7 +17,7 @@ block headers
 
 block content
     nav.navbar.navbar-expand-lg.navbar-dark.bg-transparent
-        a.navbar-brand.pulse(href='https://#{base}')
+        a.navbar-brand.pulse(href='/')
             img.brand-img#brand-img(src='/img/logo.png')
         button.navbar-toggler.custom-toggler(type='button', data-toggle='collapse', data-target='#navbarLinks', aria-controls='navbarLinks', aria-expanded='false', aria-label='Toggle navigation')#navTog
             span.navbar-toggler-icon
@@ -26,12 +26,10 @@ block content
                 li.nav-item.navItem
                     a.nav-link.navLink(href='/about') About
                 li.nav-item.navItem
-                    a.nav-link.navLink(href='/') Blog
+                    a.nav-link.navLink(href='https://blog.ndl.im') Blog
                 li.nav-item.navItem
                     a.nav-link.navLink(href='/reading') Reading List
                 li.nav-item.navItem
                     a.nav-link.navLink(href='/projects') Projects
-                li.nav-item.navItem
-                    a.nav-link.navLink(href='/meta') Meta
     .container(itemprop='', itemtype='https://schema.org/Blog')
         block blog-content
