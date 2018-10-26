@@ -14,14 +14,6 @@ app.set('view engine', 'pug');
 app.use(sslRedirect());
 app.use((bodyParser.urlencoded({ extended: true})));
 
-// Document DB
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGO_URI)
-    .catch(function (err) {
-        console.log('Database connection failed!' + err);
-    }
-);
-
 // Static Files
 app.use(express.static('public'));
 app.use(express.static('node_modules/jquery/dist'));

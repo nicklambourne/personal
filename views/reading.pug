@@ -91,31 +91,6 @@ block blog-content
                         li East of Eden - John Steinbeck
                         li The Goldfinch - Donna Tartt
 
-
-                //-
-                    #pills-tabContent.tab-content
-                        #pills-2018.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2018-tab')
-                            h3 Read So Far In 2018
-                            br
-                            .row
-                                each book in books
-                                    .col-4
-                                        .book
-                                        img(src="#{book.img}", width="100%")
-                                        a.book-overlay(href='#{book.url}')
-                                            br
-                                            p.book-overlay-text 1.
-                                            p.book-overlay-text #{book.title}
-                                            p.book-overlay-text #{book.author[0].name}
-                                            if book.author[1]
-                                                p.book-overlay-text #{book.author[1].name}
-                                            if book.medium === "Physical"
-                                                i.fas.fa-book.book-type
-                                            if book.medium === "Kindle"
-                                                i.fas.fa-tablet-alt.book-type
-                                            if book.medium === "Audible"
-                                                i.fas.fa-audible.book-type
-
                         
                 #pills-2017.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2017-tab')
                     h3 Read in 2017
