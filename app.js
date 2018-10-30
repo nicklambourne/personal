@@ -31,8 +31,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/about', function(req, res) {
-    res.render('about', {title: 'About', base: base});
+    res.redirect('https://blog.ndl.im/about/');
 });
+
+app.get('/blog', function(req, res) {
+    res.redirect('https://blog.ndl.im');
+});
+
 
 app.get('/admin', function (req, res) {
     res.redirect('https://admin.ndl.im');
