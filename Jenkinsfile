@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'git push --force git@git.heroku.com/aqueous-harbor-56769.git HEAD:master'
+                sh 'git push --force https://git.heroku.com/aqueous-harbor-56769.git HEAD:master'
             }
         }
     }
