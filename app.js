@@ -48,7 +48,7 @@ app.get('/projects', function (req, res) {
 });
 
 app.get('/cv', function (req, res) {
-    res.redirect('https://github.com/nicklambourne/resume/raw/master/cv.pdf');
+    res.redirect('/cv.pdf');
 });
 
 app.get('/listening', function(req, res) {
