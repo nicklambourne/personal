@@ -51,6 +51,7 @@ app.get('/cv', function (req, res) {
     res.redirect('/cv.pdf');
 });
 
+/*
 app.get('/listening', function(req, res) {
     request.post({
         url: 'https://api.napster.com/oauth/token',
@@ -90,6 +91,7 @@ app.get('/listening', function(req, res) {
         })
     });
 });
+*/
 
 app.get('/reading', function(req, res) {
     res.render('reading', {title: 'Reading', base: base});
