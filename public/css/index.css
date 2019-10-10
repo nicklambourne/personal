@@ -26,7 +26,7 @@ body {
 }
 
 .navItem {
-    font-family: Montserrat, sans-serif ;
+    font-family: Montserrat, sans-serif;
     display: flex;
     align-items: center;
 }
@@ -104,8 +104,8 @@ a:hover {
 }
 
 #brand-img {
-    height: 12vh;
-    width: 12vh;
+    height: 20vh;
+    width: 20vh;
 }
 
 .footer {

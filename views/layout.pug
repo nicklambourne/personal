@@ -21,16 +21,34 @@ html(lang='en')
         link(rel='stylesheet', href='/css/bootstrap.min.css')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/all.css', integrity='sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp', crossorigin='anonymous')
         block headers
-        link(rel='apple-touch-icon', sizes='180x180', href='/favicons/apple-touch-icon.png?v=eE5px9dpMd')
-        link(rel='icon', type='image/png', sizes='32x32', href='/favicons/favicon-32x32.png?v=eE5px9dpMd')
-        link(rel='icon', type='image/png', sizes='16x16', href='/favicons/favicon-16x16.png?v=eE5px9dpMd')
-        link(rel='manifest', href='/favicons/manifest.json?v=eE5px9dpMd')
-        link(rel='mask-icon', href='/favicons/safari-pinned-tab.svg?v=eE5px9dpMd', color='#490e5d')
-        link(rel='shortcut icon', href='/favicons/favicon.ico?v=eE5px9dpMd')
-        link(href="https://fonts.googleapis.com/css?family=Montserrat:500,500i" rel="stylesheet")
-        meta(name='apple-mobile-web-app-title', content='Nicholas Lambourne')
-        meta(name='application-name', content='Nicholas Lambourne')
-        meta(name='msapplication-config', content='/favicons/browserconfig.xml?v=eE5px9dpMd')
-        meta(name='theme-color', content='#ffffff')
+        link(rel="apple-touch-icon", sizes="180x180", href="favicons/apple-touch-icon.png")
+        link(rel="icon", type="image/png", sizes="32x32", href="favicons/favicon-32x32.png", id="dark-scheme-icon")
+        link(rel="icon", type="image/png", sizes="32x32", href="favicons/favicon-32x32-d.png", id="light-scheme-icon")
+        link(rel="manifest", href="favicons/site.webmanifest")
+        link(rel="mask-icon", href="favicons/safari-pinned-tab.svg", color="#662992")
+        // link(rel="shortcut icon", href="favicons/favicon.ico")
+        meta(name="msapplication-TileColor", content="#662992")
+        meta(name="msapplication-config", content="favicons/browserconfig.xml")
+        meta(name="theme-color", content="#662992")
+        script.
+            lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+            darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+            function onUpdate() {
+                if (matcher.matches) {
+                    lightSchemeIcon.remove();
+                    document.head.append(darkSchemeIcon);
+                } else {
+                    document.head.append(lightSchemeIcon);
+                    darkSchemeIcon.remove();
+                }
+            }
+
+            matcher = window.matchMedia('(prefers-color-scheme: dark)');
+            matcher.addListener(onUpdate);
+            onUpdate();
+
+
+
     body
         block content
