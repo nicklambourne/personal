@@ -9,15 +9,41 @@ block blog-content
             br
             ul#pills-tab.nav.nav-pills.mb-3.reading-pill-box(role='tablist')
                 li.nav-item.year-tab
-                    a#pills-2019-tab.nav-link.active.bg-light.text-muted(data-toggle='pill', href='#pills-2019', role='tab', aria-controls='pills-home', aria-selected='true') 2019
+                    a#pills-2020-tab.nav-link.active.bg-light.text-muted(data-toggle='pill', href='#pills-2020', role='tab', aria-controls='pills-2020', aria-selected='true') 2020
                 li.nav-item.year-tab
-                    a#pills-2018-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2018', role='tab', aria-controls='pills-home', aria-selected='true') 2018
-                li.nav-item
-                    a#pills-2017-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2017', role='tab', aria-controls='pills-profile', aria-selected='false') 2017
+                    a#pills-2019-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2019', role='tab', aria-controls='pills-2019', aria-selected='false') 2019
+                li.nav-item.year-tab
+                    a#pills-2018-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2018', role='tab', aria-controls='pills-2018', aria-selected='false') 2018
+                li.nav-item.year-tab
+                    a#pills-2017-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2017', role='tab', aria-controls='pills-2017', aria-selected='false') 2017
             br
             #pills-tabContent.tab-content
-                #pills-2019.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2019-tab')
+                #pills-2020.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2020-tab')
+                    h3 Currently Reading
+                    br
+                    ol(start=1)
+                        li QED: A Strange Theory of Light and Matter - Richard Feynman
+                        li Henry V - Ian Mortimer
+                        li The Republic - Plato
+                        li From Russia With Love - Ian Fleming
+                        li The Prince - Niccolò Machiavelli
+                        li Sense & Sensibility - Jane Austen
+                        li The Little Friend - Donna Tartt
+                        li The Manager's Path - Camille Fournier
+                        li JavaScript: The Good Parts - Douglas Crockford
+                        li Gödel, Escher, Bach: An Eternal Golden Braid - Douglas Hofstadter
+                    br
+                    h3 // TODO
+                    ul
+                        li Six Easy Pieces: Essentials of Physics Explained - Richard Feynman
+                        li Napoleon the Great - Andrew Roberts
+                        li A Farewell to Arms - Ernest Hemmingway
+                        li East of Eden - John Steinbeck
+                        li The Goldfinch - Donna Tartt
+
+                #pills-2019.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2019-tab')
                     h3 Read in 2019
+                    br
                     ol(start=1)
                         li The Three Secret Cities - Matthew Reilly
                         li The Innovators: How a Group of Hackers, Geeks and Geniuses Created the Digital Revolution - Walter Isaacson
@@ -90,29 +116,12 @@ block blog-content
                         li Bloodhound - Tamora Pierce
                         li The Norman Conquest: The Battle of Hastings and the Fall of Anglo-Saxon England - Marc Morris
                         li Mastiff - Tamora Pierce
-                    h3 Currently Reading
-                    ol(start=72)
-                        li QED: A Strange Theory of Light and Matter - Richard Feynman
                         li The Storm Before the Storm - Mike Duncan
-                        li The Republic - Plato
-                        li From Russia With Love - Ian Fleming
-                        li The Prince - Niccolò Machiavelli
-                        li Sense & Sensibility - Jane Austen
-                        li The Little Friend - Donna Tartt
-                        li The Manager's Path - Camille Fournier
-                        li JavaScript: The Good Parts - Douglas Crockford
-                        li Gödel, Escher, Bach: An Eternal Golden Braid - Douglas Hofstadter
-                    br
-                    h3 // TO DO
-                    ul
-                        li Six Easy Pieces: Essentials of Physics Explained - Richard Feynman
-                        li Napoleon the Great - Andrew Roberts
-                        li A Farewell to Arms - Ernest Hemmingway
-                        li East of Eden - John Steinbeck
-                        li The Goldfinch - Donna Tartt
+                        li Edward III: The Perfect King - Ian Mortimer
 
                 #pills-2018.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2018-tab')
                     h3 Read in 2018
+                    br
                     ol(start=1)
                         li Women & Power - Mary Beard
                         li All the President's Men - Bob Woodward & Carl Bernstein
@@ -179,9 +188,9 @@ block blog-content
                         li Diamonds Are Forever - Ian Fleming
                     br
 
-                        
                 #pills-2017.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2017-tab')
                     h3 Read in 2017
+                    br
                     ol
                         li Scarecrow and the Army of Theives - Matthew Reilly
                         li The Phoenix Project - Gene Kim, George Spafford & Kevin Behr
