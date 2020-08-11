@@ -30,7 +30,7 @@
         "express-subdomain": "^1.0.5",
         "font-awesome": "^4.7.0",
         "heroku-ssl-redirect": "0.0.4",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "lodash": "^4.17.19",
         "material-ui": "^1.0.0-beta.46",
         "mongoose": "^5.8.1",
