@@ -5,11 +5,13 @@ block blog-content
         .col-10.offset-1.text-center
             h1 Reading List
             br
-            p Each year I set myself a goal to read fifty books (roughly one per week, with a little bit of wiggle room), though I rarely succeed. The lists below combine my efforts across three mediums: physical books, ebooks (Kindle) and audiobooks (Audible).
+            p Each year I set myself a goal to read fifty books (roughly one per week, with a little bit of wiggle room), though I don't always succeed. The lists below combine my efforts across three formats: physical books, e-books (Kindle) and audiobooks (Audible).
             br
             ul#pills-tab.nav.nav-pills.mb-3.reading-pill-box(role='tablist')
                 li.nav-item.year-tab
-                    a#pills-2020-tab.nav-link.active.bg-light.text-muted(data-toggle='pill', href='#pills-2020', role='tab', aria-controls='pills-2020', aria-selected='true') 2020
+                    a#pills-2021-tab.nav-link.active.bg-light.text-muted(data-toggle='pill', href='#pills-2021', role='tab', aria-controls='pills-2021', aria-selected='true') 2021
+                li.nav-item.year-tab
+                    a#pills-2020-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2020', role='tab', aria-controls='pills-2020', aria-selected='false') 2020
                 li.nav-item.year-tab
                     a#pills-2019-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2019', role='tab', aria-controls='pills-2019', aria-selected='false') 2019
                 li.nav-item.year-tab
@@ -18,8 +20,50 @@ block blog-content
                     a#pills-2017-tab.nav-link.bg-light.text-muted(data-toggle='pill', href='#pills-2017', role='tab', aria-controls='pills-2017', aria-selected='false') 2017
             br
             #pills-tabContent.tab-content
-                #pills-2020.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2020-tab')
-                    h3 Read So Far in 2020
+                #pills-2021.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-2021-tab')
+                    h3 Read So Far in 2021
+                    br
+                    ol(start=1)
+                        li Taliban - Ahmed Rashid
+                    br
+                    h3 Currently Reading
+                    br
+                    ul
+                        li The Iliad - Homer
+                        li Harry Potter and the Order of the Phoenix - J. K. Rowling
+                        li The Last Days of Stalin - Joshua Rubenstein
+                        li Site Reliability Engineering - Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy
+                        li Emma - Jane Austen
+                    br
+                    h3 // TODO
+                    ul
+                        li The Anatomy of Fascism - Robert O. Paxton
+                        li The History of the Medieval World - Susan Wise Bauer
+                        li Wizard - Marc J. Seifer
+                        li The Clockwork Universe - Edward Dolnick
+                        li The Little Friend - Donna Tartt
+                        li Patriot Games - Tom Clancy
+                        li The Twilight War - David Crist
+                        li Microservices Patterns - Chris Richardson
+                        li An Introduction to Information Theory - John R. Pierce
+                        li The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois & John Willis
+                        li The Price of Peace - Zachary D. Carter
+                        li Misbehaving - Richard Thaler
+                        li Heroes - Stephen Fry
+                        li The Big Nine - Amy Webb
+                        li A History of Iran - Michael Axworthy
+                        li Iran: A Modern History - Abbas Amanat
+                        li Reset - Stephen Kinzer
+                        li Napoleon the Great - Andrew Roberts
+                        li The Goldfinch - Donna Tartt
+                        li A Promised Land - Barack Obama
+                        li Medieval Europe - Chris Wickham
+                        li The Sultans - Noel Barber
+                        li The Assassinations of the Archduke - Greg King & Sue Woolmans
+                        li The Radical King - Martin Luther King & Cornel West (editor)
+                        li American Predator - Maureen Callahan
+                #pills-2020.tab-pane.fade.show(role='tabpanel', aria-labelledby='pills-2020-tab')
+                    h3 Read in 2020
                     br
                     ol(start=1)
                         li Henry V - Ian Mortimer
@@ -101,44 +145,7 @@ block blog-content
                         li Harry Potter and the Prisoner of Azkaban - J. K. Rowling
                         li Heroes - Stephen Fry
                         li Caesar's Legion - Stephen Dando-Collins
-                    br
-                    h3 Currently Reading
-                    br
-                    ol(start=80)
-                        li The Iliad - Homer
                         li Harry Potter and the Goblet of Fire - J. K. Rowling
-                        li Taliban - Ahmed Rashid
-                        li Site Reliability Engineering - Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy
-                        li Emma - Jane Austen
-                    br
-                    h3 // TODO
-                    ul
-                        li The Anatomy of Fascism - Robert O. Paxton
-                        li The History of the Medieval World - Susan Wise Bauer
-                        li Wizard - Marc J. Seifer
-                        li The Clockwork Universe - Edward Dolnick
-                        li The Little Friend - Donna Tartt
-                        li Patriot Games - Tom Clancy
-                        li The Twilight War - David Crist
-                        li Microservices Patterns - Chris Richardson
-                        li An Introduction to Information Theory - John R. Pierce
-                        li The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois & John Willis
-                        li The Price of Peace - Zachary D. Carter
-                        li Misbehaving - Richard Thaler
-                        li Heroes - Stephen Fry
-                        li The Big Nine - Amy Webb
-                        li A History of Iran - Michael Axworthy
-                        li Iran: A Modern History - Abbas Amanat
-                        li Reset - Stephen Kinzer
-                        li Napoleon the Great - Andrew Roberts
-                        li The Goldfinch - Donna Tartt
-                        li A Promised Land - Barack Obama
-                        li Medieval Europe - Chris Wickham
-                        li The Sultans - Noel Barber
-                        li The Assassinations of the Archduke - Greg King & Sue Woolmans
-                        li The Radical King - Martin Luther King & Cornel West (editor)
-                        li American Predator - Maureen Callahan
-                        li The Last Days of Stalin - Joshua Rubenstein
 
                 #pills-2019.tab-pane.fade(role='tabpanel', aria-labelledby='pills-2019-tab')
                     h3 Read in 2019
